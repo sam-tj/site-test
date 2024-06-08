@@ -9,8 +9,8 @@
 
 <channel>
 	<title>About Sameer Tuteja</title>
-	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../index.html</link>
 	<description></description>
 	<lastBuildDate>Sat, 14 Jan 2023 23:00:03 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -21,16 +21,16 @@
 	<generator>https://wordpress.org/?v=6.5.4</generator>
 
 <image>
-	<url>/wp-content/uploads/2024/06/cropped-favicon-32x32.png</url>
+	<url>./../wp-content/uploads/2024/06/cropped-favicon-32x32.png</url>
 	<title>About Sameer Tuteja</title>
-	<link>/</link>
+	<link>./../index.html</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
 	<item>
 		<title>Hello world!</title>
-		<link>/hello-world/</link>
-					<comments>/hello-world/#comments</comments>
+		<link>./../hello-world/index.html</link>
+					<comments>./../hello-world/index.html#comments</comments>
 		
 		<dc:creator><![CDATA[linda]]></dc:creator>
 		<pubDate>Sat, 14 Jan 2023 23:00:03 +0000</pubDate>
@@ -42,7 +42,7 @@
 <p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/hello-world/feed/</wfw:commentRss>
+					<wfw:commentRss>./../hello-world/feed/index.html</wfw:commentRss>
 			<slash:comments>1</slash:comments>
 		
 		
