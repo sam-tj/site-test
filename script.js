@@ -39,7 +39,7 @@ document.getElementById("reset_view").addEventListener(
     modelViewer.maxCameraOrbit = "213deg 80deg 6.0m";
     modelViewer.minCameraOrbit = "165deg 64deg 3.0m";
     document.getElementById("login").style.display = "none";
-    document.getElementById("stargazing").style.display = "none";
+    document.getElementById("teaTime").style.display = "none";
     document.getElementById("model_viewer_window").style.display = "block";
     document.getElementById("about_page").style.display = "none";
     // }
@@ -65,12 +65,12 @@ const annotationClicked = (annotation) => {
     modelViewer.minCameraOrbit = "178deg 45deg 0.5m";
     document.getElementById("login").style.display = "block";
   }
-  if (annotation.name == "stargazing") {
+  if (annotation.name == "teaTime") {
     modelViewer.cameraTarget = "0.5m 0.35m 1.45m";
     modelViewer.cameraOrbit = "165deg 79.226deg 5.03m";
     modelViewer.maxCameraOrbit = "205deg 80deg 5.1m";
     modelViewer.minCameraOrbit = "160deg 60deg 4.0m";
-    document.getElementById("stargazing").style.display = "block";
+    document.getElementById("teaTime").style.display = "block";
   }
 };
 

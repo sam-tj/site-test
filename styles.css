@@ -51,8 +51,8 @@ model-viewer {
 
 .Hotspot > * {
   opacity: 1;
-  /* transform: translateY(-50%); */
-  transform: translate(-45%,-50px);
+  transform: translateY(-50%);
+  /* transform: translate(-45%,-50px); */
 }
 
 .HotspotAnnotation{
@@ -64,14 +64,14 @@ model-viewer {
   font-family: Futura, Helvetica Neue, sans-serif;
   font-size: 18px;
   font-weight: 700;
-  /* left: calc(100% + 1em); */
-  left: 0px;
+  left: calc(100% + 1em);
+  /* left: 0px; */
   max-width: 128px;
   overflow-wrap: break-word;
   padding: 0.5em 1em;
   position: absolute;
-  /* top: 50%; */
-  top: 0px;
+  top: 50%;
+  /* top: 0px; */
   width: max-content;
   display: none;
 }
