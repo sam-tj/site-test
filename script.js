@@ -68,7 +68,7 @@ const annotationClicked = (annotation) => {
   if (annotation.name == "teaTime") {
     modelViewer.cameraTarget = "0.5m 0.35m 1.45m";
     modelViewer.cameraOrbit = "165deg 79.226deg 5.03m";
-    modelViewer.maxCameraOrbit = "205deg 80deg 5.1m";
+    modelViewer.maxCameraOrbit = "205deg 90deg 5.1m";
     modelViewer.minCameraOrbit = "160deg 60deg 4.0m";
     document.getElementById("teaTime").style.display = "block";
   }
