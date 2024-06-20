@@ -195,6 +195,15 @@ model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
 }
 
+a:link.hrefStyle {
+  color: black;
+  text-decoration: none;
+}
+a:visited.hrefStyle {
+  color: black;
+  text-decoration: none;
+}
+
 h1 {
   font-size: 3dvh;
   text-align: center;

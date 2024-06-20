@@ -5,7 +5,7 @@ const onProgress = (event) => {
   updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
   if (event.detail.totalProgress === 1) {
     progressBar.classList.add("hide");
-    event.target.removeEventListener("progress", onProgress);
+    // event.target.removeEventListener("progress", onProgress);
   } else {
     progressBar.classList.remove("hide");
   }
