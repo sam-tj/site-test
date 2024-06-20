@@ -14,22 +14,24 @@
       src="untitled1.glb"
       autoplay
       ar-modes="webxr scene-viewer quick-look"
+      disable-pan
       camera-controls
       tone-mapping="neutral"
-      poster="poster.png"
       shadow-intensity="1"
-      field-of-view="39.6deg"
-      camera-orbit="212.49deg 64.84deg 6.03m"
-      min-camera-orbit="162deg 64deg 3.0m"
-      max-camera-orbit="213deg 80deg 6.0m"
-      camera-target="0.5m 0.3266m 1.45m"
-      zoom-sensitivity="0.5"
+      min-field-of-view="45deg"
+      max-field-of-view="55deg"
+      field-of-view="50deg"
+      camera-orbit="3.664142324173232rad 1.3962634015954636rad 6.0m"
+      min-camera-orbit="2.878267294859932rad 1.1292184887220118rad 6.0m"
+      max-camera-orbit="3.824369271897301rad 1.548860494666006rad 6.0m"
+      camera-target="0.650m 0.178m 1.450m"
+      zoom-sensitivity="0.1"
     >
       <button
         class="Hotspot"
         slot="hotspot-1"
         name="login"
-        data-surface="6 0 2892 2893 2894 0.058 0.514 0.429"
+        data-surface="12 0 2893 2895 2894 0.244 0.233 0.523"
         data-visibility-attribute="visible"
       >
         <div id="login" class="HotspotAnnotation">Login</div>
@@ -38,12 +40,21 @@
         class="Hotspot"
         slot="hotspot-2"
         name="teaTime"
-        data-surface="16 0 1941 1942 1943 0.480 0.038 0.482"
+        data-surface="21 0 1852 1853 1854 0.673 0.312 0.016"
         data-visibility-attribute="visible"
       >
         <div id="teaTime" class="HotspotAnnotation">Tea Time</div>
       </button>
-      <div class="progress-bar hide" slot="progress-bar">
+      <button
+        class="Hotspot"
+        slot="hotspot-3"
+        name="skyView"
+        data-surface="13 0 17 19 18 0.430 0.089 0.480"
+        data-visibility-attribute="visible"
+      >
+        <div id="skyView" class="HotspotAnnotation">Sky view</div>
+      </button>
+      <div class="progress-bar" slot="progress-bar">
         <div class="update-bar"></div>
       </div>
       <!-- <button slot="ar-button" id="ar-button">View in your space</button>

@@ -16,12 +16,19 @@ document.querySelector("model-viewer").addEventListener("progress", onProgress);
 // console.log(orbit);
 const modelViewer = document.querySelector("model-viewer");
 const startPan = () => {
+  dataPrint();
+  // console.log(modelViewer);
+};
+
+function dataPrint() {
+  console.log("--------------------");
   const orbit = modelViewer.getCameraOrbit();
   console.log("orbit: " + orbit);
   const cameraTarget = modelViewer.getCameraTarget();
   console.log("cameraTarget: " + cameraTarget);
-  console.log(modelViewer);
-};
+  const cameraFieldOfView = modelViewer.getFieldOfView();
+  console.log("cameraFieldOfView: " + cameraFieldOfView);
+}
 
 modelViewer.addEventListener(
   "contextmenu",
@@ -34,10 +41,14 @@ document.getElementById("reset_view").addEventListener(
   "click",
   (event) => {
     // if (event.touches.length > 2) {
-    modelViewer.cameraTarget = "0.5m 0.3266m 1.45m";
-    modelViewer.cameraOrbit = "212.49deg 64.84deg 6.03m";
-    modelViewer.maxCameraOrbit = "213deg 80deg 6.0m";
-    modelViewer.minCameraOrbit = "165deg 64deg 3.0m";
+    modelViewer.cameraTarget = "0.650m 0.178m 1.450m";
+
+    modelViewer.cameraOrbit = "3.664142324173232rad 1.3962634015954636rad 6.0m";
+    modelViewer.minCameraOrbit = "2.878267294859932rad 1.1292184887220118rad 6.0m";
+    modelViewer.maxCameraOrbit = "3.824369271897301rad 1.548860494666006rad 6.0001m";
+    modelViewer.minFieldOfView = "45deg";
+    modelViewer.maxFieldOfView = "55deg";
+
     document.getElementById("login").style.display = "none";
     document.getElementById("teaTime").style.display = "none";
     document.getElementById("model_viewer_window").style.display = "block";
@@ -70,7 +81,16 @@ const annotationClicked = (annotation) => {
     modelViewer.cameraOrbit = "165deg 79.226deg 5.03m";
     modelViewer.maxCameraOrbit = "205deg 90deg 5.1m";
     modelViewer.minCameraOrbit = "160deg 60deg 4.0m";
-    document.getElementById("teaTime").style.display = "block";
+    // document.getElementById("teaTime").style.display = "block";
+  }
+  if (annotation.name == "skyView") {
+    modelViewer.cameraTarget = "0.6642386734445549m 1.3084799392279403m 1.4503990786472942m";
+    modelViewer.fieldOfView = "18deg";
+    modelViewer.minFieldOfView = "15deg";
+    modelViewer.maxFieldOfView = "30deg";
+
+    modelViewer.minCameraOrbit = "2.792526803190927rad 1.5506241796612912rad 1.5m";
+    modelViewer.maxCameraOrbit = "3.5779249665883754rad 1.669902962712161rad 4m";
   }
 };
 
