@@ -20,6 +20,25 @@ const startPan = () => {
   // console.log(modelViewer);
 };
 
+const modal = document.getElementById("myModal");
+const span = document.getElementsByClassName("close")[0];
+const model_viewer_id = document.getElementById("model_viewer_window");
+
+function openModal() {
+  modal.style.display = "block";
+}
+
+span.onclick = function () {
+  modal.style.display = "none";
+  model_viewer_id.classList.remove("blur_filter");
+};
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    model_viewer_id.classList.remove("blur_filter");
+  }
+};
+
 function dataPrint() {
   console.log("--------------------");
   const orbit = modelViewer.getCameraOrbit();
@@ -51,7 +70,7 @@ document.getElementById("reset_view").addEventListener(
 
     document.getElementById("login").style.display = "none";
     document.getElementById("teaTime").style.display = "none";
-    document.getElementById("model_viewer_window").style.display = "block";
+    model_viewer_id.style.display = "block";
     document.getElementById("about_page").style.display = "none";
     // }
   },
@@ -61,7 +80,7 @@ document.getElementById("reset_view").addEventListener(
 document.getElementById("login").addEventListener(
   "click",
   (event) => {
-    document.getElementById("model_viewer_window").style.display = "none";
+    model_viewer_id.style.display = "none";
     document.getElementById("about_page").style.display = "block";
   },
   true

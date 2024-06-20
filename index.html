@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>&lt;model-viewer&gt; template</title>
+    <title>About Sameer Tuteja</title>
     <meta charset="utf-8" />
-    <meta name="description" content="&lt;model-viewer&gt; template" />
+    <meta name="description" content="About Sameer Tuteja" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link type="text/css" href="./styles.css" rel="stylesheet" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="background_color" content="#ffffff" />
   </head>
-  <body>
+  <body onload="openModal()">
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1>House Rules 🏡</h1>
+        <p>
+          Roam about my home office.🐈
+          <br /><br />
+          <b>Tap the blue dots to jump to locations</b>
+          <br /><br />
+          You can use ZOOM 🔍 feature too, <br />& if you get lost, hit the
+          <b>Bring me back</b> button.
+        </p>
+      </div>
+    </div>
     <!-- <model-viewer> HTML element -->
     <model-viewer
       id="model_viewer_window"
@@ -26,6 +43,7 @@
       max-camera-orbit="3.824369271897301rad 1.548860494666006rad 6.0m"
       camera-target="0.650m 0.178m 1.450m"
       zoom-sensitivity="0.1"
+      class="blur_filter"
     >
       <button
         class="Hotspot"
@@ -63,10 +81,10 @@
         </div> -->
     </model-viewer>
     <div>
-      <button class="reset_button" id="reset_view">Reset View</button>
+      <button class="reset_button" id="reset_view">Bring me back</button>
     </div>
     <div id="about_page" style="display: none; height: 90%; width: 100%">
-      <iframe style="height: 100%; width: 100%" src="/about_content/index.html"> </iframe>
+      <iframe style="height: 100%; width: 100%" src="about_content/index.html"> </iframe>
     </div>
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
@@ -76,12 +94,3 @@
     ></script>
   </body>
 </html>
-
-<!-- camera-orbit="180deg 53.226deg 2.03m" -->
-<!-- camera-target="-1.25m 0.85m 0.529m" -->
-
-<!-- side-cam
-camera-orbit="212.49deg 64.84deg 6.03m"
-min-camera-orbit="165deg 60deg 3.0m"
-max-camera-orbit="213deg 80deg 6.0m"
-camera-target="0.5m 0.3266m 1.45m" -->
