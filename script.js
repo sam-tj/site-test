@@ -2,12 +2,16 @@
 const onProgress = (event) => {
   const progressBar = event.target.querySelector(".progress-bar");
   const updatingBar = event.target.querySelector(".update-bar");
+  const updateEmoji = document.getElementById("progressBarEmoji");
   updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+  updateEmoji.style.left = `${event.detail.totalProgress * 100}%`;
   if (event.detail.totalProgress === 1) {
     progressBar.classList.add("hide");
+    document.getElementById("progressBarContent").style.display = "none";
     // event.target.removeEventListener("progress", onProgress);
   } else {
     progressBar.classList.remove("hide");
+    document.getElementById("progressBarContent").style.display = "block";
   }
 };
 document.querySelector("model-viewer").addEventListener("progress", onProgress);
@@ -31,11 +35,13 @@ function openModal() {
 span.onclick = function () {
   modal.style.display = "none";
   model_viewer_id.classList.remove("blur_filter");
+  document.getElementById("progressBarContent").classList.remove("blur_filter");
 };
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
     model_viewer_id.classList.remove("blur_filter");
+    document.getElementById("progressBarContent").classList.remove("blur_filter");
   }
 };
 
