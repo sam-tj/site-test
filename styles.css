@@ -55,7 +55,7 @@ model-viewer {
   /* transform: translate(-45%,-50px); */
 }
 
-.HotspotAnnotation{
+.HotspotAnnotation {
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
@@ -82,7 +82,6 @@ model-viewer {
   transform: translateY(calc(-50% + 4px));
   transition: transform 0.3s, opacity 0.3s;
 }
-
 
 .progress-bar {
   display: block;
@@ -113,8 +112,6 @@ model-viewer {
   transition: width 0.3s;
 }
 
-
-
 .reset_button {
   background-image: url(ar_icon.png);
   background-repeat: no-repeat;
@@ -125,15 +122,15 @@ model-viewer {
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  bottom: 16px;
+  bottom: 25px;
   padding: 0px 16px 0px 40px;
   font-family: Roboto Regular, Helvetica Neue, sans-serif;
   font-size: 14px;
-  color:#4285f4;
+  color: #4285f4;
   height: 36px;
   line-height: 36px;
   border-radius: 18px;
-  border: 1px solid #DADCE0;
+  border: 1px solid #dadce0;
 }
 
 #ar-button {
@@ -150,15 +147,15 @@ model-viewer {
   padding: 0px 16px 0px 40px;
   font-family: Roboto Regular, Helvetica Neue, sans-serif;
   font-size: 14px;
-  color:#4285f4;
+  color: #4285f4;
   height: 36px;
   line-height: 36px;
   border-radius: 18px;
-  border: 1px solid #DADCE0;
+  border: 1px solid #dadce0;
 }
 
 #ar-button:active {
-  background-color: #E8EAED;
+  background-color: #e8eaed;
 }
 
 #ar-button:focus {
@@ -170,13 +167,21 @@ model-viewer {
 }
 
 @keyframes circle {
-  from { transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg); }
-  to   { transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg); }
+  from {
+    transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg);
+  }
 }
 
 @keyframes elongate {
-  from { transform: translateX(100px); }
-  to   { transform: translateX(-100px); }
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(-100px);
+  }
 }
 
 model-viewer > #ar-prompt {
@@ -263,7 +268,7 @@ p {
   filter: blur(3px);
 }
 
-.progressBarContent{
+.progressBarContent {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -276,7 +281,7 @@ p {
   top: calc(50% - 400px);
 }
 
-.progressBarContent .progressBarEmoji{
+.progressBarContent .progressBarEmoji {
   position: fixed;
   left: 33%;
   top: calc(50% - 110px);
@@ -284,17 +289,17 @@ p {
   width: 30%;
 }
 
-.progressBarEmojiTranslate{
-  position: absolute;  
+.progressBarEmojiTranslate {
+  position: absolute;
   /* transform: scale(-1, 1); */
 }
 
-.progressBarEmojiTranslate img{
+.progressBarEmojiTranslate img {
   width: 100px;
-  transform: translate(-50%, -50%)  scale(-1, 1);
+  transform: translate(-50%, -50%) scale(-1, 1);
 }
 
-.progressBarImage img{
+.progressBarImage img {
   border-radius: 30%;
 }
 
@@ -305,4 +310,20 @@ p {
   transform: translate(-50%, -50%);
   color: white;
   font-weight: bold;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 100%;
+  color: black;
+  text-align: center;
+}
+
+.iframeStyle {
+  display: none;
+  height: 90%;
+  width: 98%;
+  margin: auto;
 }
