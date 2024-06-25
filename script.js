@@ -28,22 +28,36 @@ const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
 const model_viewer_id = document.getElementById("model_viewer_window");
 
-function openModal() {
+document.querySelector("body").onload = function () {
   modal.style.display = "block";
-}
+};
 
 span.onclick = function () {
   modal.style.display = "none";
   model_viewer_id.classList.remove("blur_filter");
   document.getElementById("progressBarContent").classList.remove("blur_filter");
+  document.getElementById("bringMeBack").classList.remove("blur_filter");
 };
-window.onclick = function (event) {
+
+let clickOrTouchEvent = "ontouchstart" in window ? "touchstart" : "click";
+
+document.querySelector("body").addEventListener(clickOrTouchEvent, (event) => {
   if (event.target == modal) {
     modal.style.display = "none";
     model_viewer_id.classList.remove("blur_filter");
     document.getElementById("progressBarContent").classList.remove("blur_filter");
+    document.getElementById("bringMeBack").classList.remove("blur_filter");
   }
-};
+});
+
+// window.onclick = function (event) {
+//   // if (event.target == modal) {
+//   modal.style.display = "none";
+//   model_viewer_id.classList.remove("blur_filter");
+//   document.getElementById("progressBarContent").classList.remove("blur_filter");
+//   document.getElementById("bringMeBack").classList.remove("blur_filter");
+//   // }
+// };
 
 function dataPrint() {
   console.log("--------------------");
@@ -71,9 +85,9 @@ document.getElementById("reset_view").addEventListener(
     modelViewer.cameraOrbit = "3.664142324173232rad 1.3962634015954636rad 6.0m";
     modelViewer.minCameraOrbit = "2.878267294859932rad 1.1292184887220118rad 6.0m";
     modelViewer.maxCameraOrbit = "3.824369271897301rad 1.548860494666006rad 6.0001m";
+    modelViewer.fieldOfView = "50deg";
     modelViewer.minFieldOfView = "45deg";
     modelViewer.maxFieldOfView = "55deg";
-
     document.getElementById("login").style.display = "none";
     document.getElementById("teaTime").style.display = "none";
     model_viewer_id.style.display = "block";
@@ -100,12 +114,18 @@ const annotationClicked = (annotation) => {
     modelViewer.maxCameraOrbit = "182deg 65deg 2.5m";
     modelViewer.minCameraOrbit = "178deg 45deg 0.5m";
     document.getElementById("login").style.display = "block";
+    modelViewer.fieldOfView = "50deg";
+    modelViewer.minFieldOfView = "45deg";
+    modelViewer.maxFieldOfView = "55deg";
   }
   if (annotation.name == "teaTime") {
     modelViewer.cameraTarget = "0.5m 0.35m 1.45m";
     modelViewer.cameraOrbit = "165deg 79.226deg 5.03m";
     modelViewer.maxCameraOrbit = "205deg 90deg 5.1m";
     modelViewer.minCameraOrbit = "160deg 60deg 4.0m";
+    modelViewer.fieldOfView = "50deg";
+    modelViewer.minFieldOfView = "45deg";
+    modelViewer.maxFieldOfView = "55deg";
     // document.getElementById("teaTime").style.display = "block";
   }
   if (annotation.name == "skyView") {
