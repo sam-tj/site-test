@@ -16,7 +16,8 @@ body {
 model-viewer {
   width: 100%;
   height: 90%;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  z-index: 1;
 }
 
 .Hotspot {
@@ -131,6 +132,7 @@ model-viewer {
   line-height: 36px;
   border-radius: 18px;
   border: 1px solid #dadce0;
+  display: none;
 }
 
 #ar-button {
@@ -273,6 +275,9 @@ p {
   width: 100%;
   height: 100%;
   z-index: 1;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 }
 
 .progressBarContent .progressBarImage {
@@ -319,6 +324,7 @@ p {
   width: 100%;
   color: black;
   text-align: center;
+  z-index: 1;
 }
 
 .iframeStyle {
@@ -326,4 +332,16 @@ p {
   height: 90%;
   width: 98%;
   margin: auto;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
