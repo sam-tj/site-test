@@ -32,21 +32,21 @@ document.querySelector("body").onload = function () {
   modal.style.display = "block";
 };
 
-span.onclick = function () {
+function closeModal() {
+  document.getElementById("reset_view").style.display = "block";
   modal.style.display = "none";
   model_viewer_id.classList.remove("blur_filter");
   document.getElementById("progressBarContent").classList.remove("blur_filter");
   document.getElementById("bringMeBack").classList.remove("blur_filter");
-};
+}
+
+span.onclick = closeModal;
 
 let clickOrTouchEvent = "ontouchstart" in window ? "touchstart" : "click";
 
 document.querySelector("body").addEventListener(clickOrTouchEvent, (event) => {
   if (event.target == modal) {
-    modal.style.display = "none";
-    model_viewer_id.classList.remove("blur_filter");
-    document.getElementById("progressBarContent").classList.remove("blur_filter");
-    document.getElementById("bringMeBack").classList.remove("blur_filter");
+    closeModal();
   }
 });
 
