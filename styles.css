@@ -338,6 +338,20 @@ p {
   margin: auto;
 }
 
+.helpButton {
+  position: absolute;
+  bottom: 10%;
+  right: 0%;
+  transform: translate(-25%, -50%); 
+  background-color: #0000006c;
+  /* border-radius: 20px; */
+  z-index: 1;
+  margin: auto;
+  line-height: 6dvh;
+  font-size: 4dvh;
+  display: none;
+}
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;

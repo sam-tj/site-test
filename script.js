@@ -34,6 +34,7 @@ document.querySelector("body").onload = function () {
 
 function closeModal() {
   document.getElementById("reset_view").style.display = "block";
+  document.getElementById("helpButton").style.display = "block";
   modal.style.display = "none";
   model_viewer_id.classList.remove("blur_filter");
   document.getElementById("progressBarContent").classList.remove("blur_filter");
@@ -93,6 +94,14 @@ document.getElementById("reset_view").addEventListener(
     model_viewer_id.style.display = "block";
     document.getElementById("about_page").style.display = "none";
     // }
+  },
+  true
+);
+
+document.getElementById("helpButton").addEventListener(
+  "click",
+  (event) => {
+    modal.style.display = "block";
   },
   true
 );
