@@ -39,6 +39,7 @@ function closeModal() {
   model_viewer_id.classList.remove("blur_filter");
   document.getElementById("progressBarContent").classList.remove("blur_filter");
   document.getElementById("bringMeBack").classList.remove("blur_filter");
+  document.getElementById("helpButton").classList.remove("blur_filter");
 }
 
 span.onclick = closeModal;
@@ -102,6 +103,10 @@ document.getElementById("helpButton").addEventListener(
   "click",
   (event) => {
     modal.style.display = "block";
+    model_viewer_id.classList.add("blur_filter");
+    document.getElementById("progressBarContent").classList.add("blur_filter");
+    document.getElementById("bringMeBack").classList.add("blur_filter");
+    document.getElementById("helpButton").classList.add("blur_filter");
   },
   true
 );
