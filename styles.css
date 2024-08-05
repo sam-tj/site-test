@@ -56,6 +56,10 @@ model-viewer {
   /* transform: translate(-45%,-50px); */
 }
 
+.ProfileHotspot{
+  background: #ff4500;
+}
+
 .HotspotAnnotation {
   background: #fff;
   border-radius: 4px;
