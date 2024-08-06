@@ -127,7 +127,7 @@ model-viewer {
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  bottom: 25px;
+  bottom: 45px;
   padding: 0px 16px 0px 40px;
   font-family: Roboto Regular, Helvetica Neue, sans-serif;
   font-size: 14px;
@@ -362,4 +362,34 @@ p {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+.animateModalOpen {
+  animation: fadeIn 500ms ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translate(100%, 80%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+.animateModalClose {
+  animation: fadeOut 500ms ease-out backwards;
+}
+
+@keyframes fadeOut {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  to {
+    transform: translate(100%, 80%);
+    opacity: 0;
+  }
 }

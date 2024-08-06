@@ -35,11 +35,15 @@ document.querySelector("body").onload = function () {
 function closeModal() {
   document.getElementById("reset_view").style.display = "block";
   document.getElementById("helpButton").style.display = "block";
-  modal.style.display = "none";
   model_viewer_id.classList.remove("blur_filter");
   document.getElementById("progressBarContent").classList.remove("blur_filter");
   document.getElementById("bringMeBack").classList.remove("blur_filter");
   document.getElementById("helpButton").classList.remove("blur_filter");
+  modal.classList.remove("animateModalOpen");
+  modal.classList.add("animateModalClose");
+  setTimeout(function () {
+    modal.style.display = "none";
+  }, 500); // 500 is the same time as the CSS animation
 }
 
 span.onclick = closeModal;
@@ -107,6 +111,8 @@ document.getElementById("helpButton").addEventListener(
     document.getElementById("progressBarContent").classList.add("blur_filter");
     document.getElementById("bringMeBack").classList.add("blur_filter");
     document.getElementById("helpButton").classList.add("blur_filter");
+    modal.classList.remove("animateModalClose");
+    modal.classList.add("animateModalOpen");
   },
   true
 );
